@@ -2,7 +2,7 @@
 
 // This file allows the administrator to add inventory.
 // This script is created in Chapter 11.
-
+include('./password_protect.php');
 // Require the configuration before any PHP code as configuration controls error reporting.
 require ('../includes/config.inc.php');
 

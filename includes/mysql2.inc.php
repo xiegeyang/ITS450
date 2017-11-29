@@ -5,8 +5,8 @@
 // This script is begun in Chapter 7.
 
 // Set the database access information as constants:
-DEFINE ('DB_USER', 'user');
-DEFINE ('DB_PASSWORD', 'user');
+DEFINE ('DB_USER', 'root');
+DEFINE ('DB_PASSWORD', 'toor');
 DEFINE ('DB_HOST', 'localhost');
 DEFINE ('DB_NAME', 'ecommerce2');
 

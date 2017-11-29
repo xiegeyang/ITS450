@@ -2,9 +2,9 @@
 
 // This file allows the administrator to add sales.
 // This script is created in Chapter 11.
-
+include('./password_protect.php');
 // Require the configuration before any PHP code as configuration controls error reporting.
-require_once ('../includes/config.inc.php');
+require_once ('../includes/config2.inc.php');
 
 // Set the page title and include the header:
 $page_title = 'Create Sales';

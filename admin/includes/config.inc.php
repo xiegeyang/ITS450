@@ -27,7 +27,7 @@ if ($_SERVER['HTTP_HOST']=='localhost') {
 	$debug = TRUE;
 	define ('BASE_URI', '/home/nathan/Downloads/ex2/');
 	define ('BASE_URL',	'localhost/');
-	define ('MYSQL', BASE_URI . 'mysql.inc.php');
+	define ('MYSQL', BASE_URI . 'mysql2.inc.php');
 } else {
 	define ('BASE_URI', '/path/to/htdocs/folder/');
 	define ('BASE_URL',	'http://www.address.com/');

@@ -2,7 +2,7 @@
 
 // This is the adminstrative home page.
 // This script is created in Chapter 11.
-
+require('./password_protect.php');
 // Require the configuration before any PHP code as configuration controls error reporting.
 require ('../includes/config.inc.php');
 
