@@ -56,22 +56,22 @@ foreach( $line_items as $value )
 // submit the post, and record the response.
 // If you receive an error, you may want to ensure that you have the curl
 // library enabled in your php configuration
-echo 'start';
+//echo 'start';
 $request = curl_init(GATEWAY_API_URL); // initiate curl object
-echo '1111111111111';
+//echo '1111111111111';
 curl_setopt($request, CURLOPT_HEADER, 0); // set to 0 to eliminate header info from response
-echo '22222222222222';
+//echo '22222222222222';
 curl_setopt($request, CURLOPT_RETURNTRANSFER, 1); // Returns response data instead of TRUE(1)
-echo '3333333333333';
+//echo '3333333333333';
 curl_setopt($request, CURLOPT_POSTFIELDS, $post_string); // use HTTP POST to send form data
-echo '4444444444444';
+//echo '4444444444444';
 curl_setopt($request, CURLOPT_SSL_VERIFYPEER, FALSE); // uncomment this line if you get no gateway response.
 
-echo 'successs';
+//echo 'successs';
 $response = curl_exec($request); // execute curl post and store results in $post_response
 // additional options may be required depending upon your server configuration
 // you can find documentation on curl options at http://www.php.net/curl_setopt
-echo $response;
+//echo $response;
 curl_close ($request); // close curl object
 
 // This line takes the response and breaks it into an array using the specified delimiting character

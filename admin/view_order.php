@@ -46,14 +46,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	if (mysqli_num_rows($r) == 1) {
 		
 		// Get the returned values:
-		list($customer_id, $order_total, $trans_id) = mysqli_fetch_array($r, MYSQL_NUM);
+		list($customer_id, $order_total, $trans_id) = mysqli_fetch_array($r, MYSQLI_NUM);
 		
 		// Check for a positive order total:
 		if ($order_total > 0) {
 			
 			// Make the request to the payment gateway:
-			require_once(BASE_URI . 'private/gateway_setup_admin.php');
-			require_once(BASE_URI . 'private/gateway_process.php');
+			require_once(BASE_URI . 'html/private/gateway_setup_admin.php');
+			require_once(BASE_URI . 'html/private/gateway_process.php');
 			
 			// Add slashes to two text values:
 			$reason = addslashes($response_array[3]);

@@ -18,7 +18,7 @@ define('TIMEOUT_CHECK_ACTIVITY', true);
 #  SETTINGS END
 
 // timeout in seconds
-$timeout = (TIMEOUT_MINUTES == 0 ? 0 : time() + TIMEOUT_MINUTES * 60);
+$timeout = (TIMEOUT_MINUTES == 0 ? 0 : time() + TIMEOUT_MINUTES * 5);
 // logout?
 if(isset($_GET['logout'])) {
   setcookie("verify", '', $timeout, '/'); // clear password;

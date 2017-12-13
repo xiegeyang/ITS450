@@ -7,7 +7,7 @@
 require ('./includes/config.inc.php');
 
 // Include the header file:
-$page_title = 'Coffee - Wouldn\'t You Love a Cup Right Now?';
+$page_title = 'Auto Everything';
 include ('./includes/header.html');
 
 // Require the database connection:

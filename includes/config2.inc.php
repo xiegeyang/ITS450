@@ -34,7 +34,7 @@ $contact_email = 'you@example.com';
 
 // Determine location of files and the URL of the site:
 define ('BASE_URI', '/var/www/');
-define ('BASE_URL', 'localhost:8888/');
+define ('BASE_URL', 'localhost/');
 define ('MYSQL', BASE_URI . 'html/includes/mysql2.inc.php');
 
 // ************ CONSTANTS *********** //

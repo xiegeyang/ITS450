@@ -8,5 +8,5 @@ RewriteRule ^shop/([A-Za-z\+]+)/?$ shop.php?type=$1
 RewriteRule ^browse/([A-Za-z\+\-]+)/([A-Za-z\+\-]+)/([0-9]+)$ browse.php?type=$1&category=$2&id=$3
 # For HTTPS pages:
 RewriteCond %{HTTPS} off
-RewriteRule ^(checkout\.php|billing\.php|final\.php|admin/(.*))$ https://%{HTTP_HOST}/$1 [R=301,L]
+RewriteRule ^(newsletter\.php|checkout\.php|billing\.php|final\.php|admin/(.*))$ https://%{HTTP_HOST}/$1 [R=301,L]
 </IfModule>

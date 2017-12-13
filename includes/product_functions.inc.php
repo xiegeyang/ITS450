@@ -56,9 +56,9 @@ function get_just_price($regular, $sales) {
 	
 	// Return the sale price, when appropriate:
 	if ((0 < $sales) && ($sales < $regular)) {
-		return number_format($sales, 2);
+		return number_format($sales, 2, '.', '');
 	} else {
-		return number_format($regular, 2);
+		return number_format($regular, 2, '.', '');
 	}
 	
 } // End of get_just_price() fucntion.

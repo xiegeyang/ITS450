@@ -6,7 +6,7 @@
 // Require the configuration before any PHP code:
 require ('./includes/config.inc.php');
 
-// Start the session:
+// Start the sesecsion:
 session_start();
 
 // The session ID is the user's cart ID:

@@ -30,13 +30,18 @@ while ($row = mysqli_fetch_array($r, MYSQLI_ASSOC)) {
 	$price = get_just_price($row['price'], $row['sale_price']);
 	
 	// Calculate the subtotal:
+//	$q = $row['quantity'];
 	$subtotal = $price * $row['quantity'];
-	
+//	$subtotal = ($price * $q);
+//settype($price, "double");
+//$ttt = ($price * $q);
+//echo $ttt;
+//	echo $subtotal;	
 	// Print out a table row:
 	echo '<tr><td>' . $row['category'] . '::' . $row['name'] . '</td>
 		<td align="center"><input type="text" name="quantity[' . $row['sku'] . ']" value="' . $row['quantity'] . '" size="2" class="small" /></td>
-		<td align="right">$' . $price . '</td>
-		<td align="right">$' . number_format($subtotal, 2) . '</td>
+		<td align="right">$' . number_format($price,2) . '</td>
+		<td align="right">$' . number_format($subtotal,2) . '</td>
 		<td align="right"><a href="/wishlist.php?sku=' . $row['sku'] . '&action=move&qty=' . $row['quantity'] .'">Move to Wish List</a><br /><a href="/cart.php?sku=' . $row['sku'] . '&action=remove">Remove from Cart</a></td>
 	</tr>
 	';

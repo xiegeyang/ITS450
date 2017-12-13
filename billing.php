@@ -113,7 +113,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		$cc_exp = sprintf('%02d%d', $_POST['cc_exp_month'], $_POST['cc_exp_year']);
 		
 		// Check for an existing order ID:
-		if (isset($_SESSION['order_id'])) { // Use existing order info:
+
+
+		if (isset($_SESSION['order_id']) && isset($_SESSION['order_total'])) { // Use existing order info:
 			$order_id = $_SESSION['order_id'];
 			$order_total = $_SESSION['order_total'];
 		} else { // Create a new order record:
@@ -152,13 +154,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				
 				// Need the customer ID:
 				$customer_id = $_SESSION['customer_id'];
-echo '1111';
+//echo '1111';
 				// Make the request to the payment gateway:
 				require_once('./private/gateway_setup.php');
 
-echo '3333';
+//echo '3333';
 				require_once('./private/gateway_process.php');
-	echo '2222';			
+//	echo '2222';			
 				// Add slashes to two text values:
 				$reason = addslashes($response_array[3]);
 				$response = addslashes($response);

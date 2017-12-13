@@ -128,21 +128,21 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		// Add the user to the database...
 		
 		// Call the stored procedure:
-		echo '33333333333';
+	//	echo '33333333333';
 		$r = mysqli_query($dbc, "CALL add_customer('$e', '$fn', '$ln', '$a1', '$a2', '$c', '$s', $z, $p, @cid)");
-		echo '44444444444';
+	//	echo '44444444444';
 		// Confirm that it worked:
 		if ($r) {
 		
 			// Retrieve the customer ID:
-			echo '222222222';
+	///		echo '222222222';
 			$r = mysqli_query($dbc, 'SELECT @cid');
 			if (mysqli_num_rows($r) == 1) {
 
 				list($_SESSION['customer_id']) = mysqli_fetch_array($r);
 					
 				// Redirect to the next page:
-				echo '11111111111111';
+	//			echo '11111111111111';
 				$location = 'https://' . BASE_URL . 'billing.php';
 				header("Location: $location");
 				exit();

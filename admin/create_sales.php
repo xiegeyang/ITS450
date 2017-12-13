@@ -83,7 +83,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	<tbody>
 
 <?php // Retrieve every in stock product:
-$q = '(SELECT CONCAT("O", ncp.id) AS sku, ncc.category, ncp.name, ncp.price, ncp.stock FROM non_coffee_products AS ncp INNER JOIN non_coffee_categories AS ncc ON ncc.id=ncp.non_coffee_category_id WHERE ncp.stock > 0 ORDER BY category, name) UNION (SELECT CONCAT("C", sc.id), gc.category, CONCAT_WS(" - ", s.size, sc.caf_decaf, sc.ground_whole), sc.price, sc.stock FROM specific_coffees AS sc INNER JOIN sizes AS s ON s.id=sc.size_id INNER JOIN general_coffees AS gc ON gc.id=sc.general_coffee_id WHERE sc.stock > 0 ORDER BY sc.general_coffee_id, sc.size, sc.caf_decaf, sc.ground_whole)';
+$q = '(SELECT CONCAT("O", ncp.id) AS sku, ncc.category, ncp.name, ncp.price, ncp.stock FROM non_coffee_products AS ncp INNER JOIN non_coffee_categories AS ncc ON ncc.id=ncp.non_coffee_category_id WHERE ncp.stock > 0 ORDER BY category, name) UNION (SELECT CONCAT("C", sc.id), gc.category, CONCAT_WS(" - ", s.size, sc.caf_decaf, sc.ground_whole), sc.price, sc.stock FROM specific_coffees AS sc INNER JOIN sizes AS s ON s.id=sc.size_id INNER JOIN general_coffees AS gc ON gc.id=sc.general_coffee_id WHERE sc.stock > 0 ORDER BY sc.general_coffee_id, sc.size_id, sc.caf_decaf, sc.ground_whole)';
 $r = mysqli_query ($dbc, $q);
 while ($row = mysqli_fetch_array ($r, MYSQLI_ASSOC)) {
 	echo '<tr>
